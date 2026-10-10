@@ -68,7 +68,7 @@ export const PRODUCTS = [
     category: 'bombons',
     description: 'Bombom artesanal de Kinder Bueno.',
     price: 28.0,
-    image: 'assets/images/products/bombom/bombom-de-kinder-bueno.jpeg',
+    image: 'assets/images/products/bombom/bombom-kinder-bueno.jpeg',
     featured: true,
   },
 
@@ -106,6 +106,16 @@ export const PRODUCTS = [
     featured: true,
   },
 
+  {
+    id: 26,
+    name: 'Ice Cookie',
+    category: 'cookies',
+    description: 'Gelato de ninho, acompanhado com um cookie.',
+    price: 18.0,
+    image: 'assets/images/products/cookie/ice-cookie.jpeg',
+    featured: true,
+  },
+
   // =========================
   // BROWNIES
   // =========================
@@ -116,7 +126,7 @@ export const PRODUCTS = [
     category: 'brownies',
     description: 'Brownie na marmitinha com Ninho e Nutella.',
     price: 24.0,
-    image: 'assets/images/products/brownie/brownie-ninho-nutella.jpg',
+    image: 'assets/images/products/brownie/brownie-de-ninho.jpeg',
     featured: true,
   },
 
@@ -126,7 +136,7 @@ export const PRODUCTS = [
     category: 'brownies',
     description: 'Brownie na marmitinha com maracujá e chocolate.',
     price: 24.0,
-    image: 'assets/images/products/brownie-maracuja-chocolate.jpg',
+    image: 'assets/images/products/brownie/brownie-maracuja.jpeg',
     featured: false,
   },
 
@@ -209,7 +219,7 @@ export const PRODUCTS = [
     name: 'Box Aniversário',
     category: 'mini-bolos',
     description: 'box de aniversário',
-    price: 14.0,
+    price: 50.0,
     image: 'assets/images/products/bolo/box-aniversario.jpeg',
     featured: false,
   },

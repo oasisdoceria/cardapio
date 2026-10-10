@@ -5,7 +5,7 @@ export const WHATSAPP_CONFIG = {
 
   messages: {
     orderIntro: 'Olá! Gostaria de fazer um pedido:',
-    emptyCart: 'Olá! Gostaria de conhecer os produtos da Contém Amor.',
+    emptyCart: 'Olá! Gostaria de conhecer os produtos da Oásis.',
     orderFooter: 'Aguardo a confirmação do pedido. Obrigado!',
   },
 };

@@ -5,6 +5,9 @@
 
 const STORAGE_KEY = 'contemamor:cart';
 
+/** Taxa fixa de entrega (R$), somada ao total de qualquer pedido com itens. */
+const DELIVERY_FEE = 8;
+
 export class Cart {
   constructor(products) {
     this.products = new Map(products.map((p) => [p.id, p]));
@@ -97,11 +100,22 @@ export class Cart {
     return this.getItems().reduce((sum, item) => sum + item.price * item.quantity, 0);
   }
 
+  getDeliveryFee() {
+    return this.getItemCount() > 0 ? DELIVERY_FEE : 0;
+  }
+
+  getGrandTotal() {
+    return this.getTotal() + this.getDeliveryFee();
+  }
+
   getState() {
     return {
       items: this.getItems(),
       itemCount: this.getItemCount(),
       total: this.getTotal(),
+      deliveryFee: this.getDeliveryFee(),
+      grandTotal: this.getGrandTotal(),
     };
   }
 }
+ 

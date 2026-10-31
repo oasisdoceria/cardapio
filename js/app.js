@@ -23,6 +23,7 @@ const els = {
   cartEmpty: document.getElementById('cartEmpty'),
   cartFooter: document.getElementById('cartFooter'),
   cartTotal: document.getElementById('cartTotal'),
+  cartDeliveryFee: document.getElementById('cartDeliveryFee'),
   cartCheckout: document.getElementById('cartCheckout'),
   cartClear: document.getElementById('cartClear'),
   floatingCart: document.getElementById('floatingCart'),
@@ -79,7 +80,7 @@ function closeCart() {
 }
 
 function updateCartUI(state) {
-  const { items, itemCount, total } = state;
+  const { items, itemCount, deliveryFee, grandTotal } = state;
 
   els.cartCount.textContent = itemCount;
   els.cartCount.hidden = itemCount === 0;
@@ -87,11 +88,12 @@ function updateCartUI(state) {
   renderCartItems(els.cartItems, items);
   els.cartEmpty.hidden = items.length > 0;
   els.cartFooter.hidden = items.length === 0;
-  els.cartTotal.textContent = formatPrice(total);
+  if (els.cartDeliveryFee) els.cartDeliveryFee.textContent = formatPrice(deliveryFee);
+  els.cartTotal.textContent = formatPrice(grandTotal);
 
   els.floatingCart.hidden = itemCount === 0;
   els.floatingCartCount.textContent = itemCount;
-  els.floatingCartTotal.textContent = formatPrice(total);
+  els.floatingCartTotal.textContent = formatPrice(grandTotal);
 
   getVisibleProducts().forEach((product) => {
     updateProductControls(els.menuGrid, product.id, cart.getQuantity(product.id));
@@ -146,7 +148,9 @@ function init() {
   });
 
   els.cartCheckout.addEventListener('click', () => {
-    openWhatsAppWithCart(cart.getItems(), cart.getTotal());
+    openWhatsAppWithCart(cart.getItems(), cart.getGrandTotal(), cart.getDeliveryFee());
+    cart.clear();
+    closeCart();
   });
 
   document.addEventListener('keydown', (event) => {

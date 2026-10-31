@@ -26,66 +26,65 @@
  *
  * Produtos baseados no cardápio fornecido pela cliente.
  */
-
 export const CATEGORIES = [
   { id: 'todos', label: 'Todos' },
   { id: 'bombons', label: 'Bombons' },
   { id: 'cookies', label: 'Cookies' },
   { id: 'brownies', label: 'Brownies' },
-  { id: 'mini-bolos', label: 'bolos' },
+  { id: 'mini-bolos', label: 'Bolos' },
   { id: 'entremets', label: 'Entremets' },
   { id: 'salgados', label: 'Salgados' },
 ];
-
+ 
 export const PRODUCTS = [
   // =========================
   // BOMBONS
   // =========================
-
+ 
   {
     id: 1,
     name: 'Bombom de Morango',
     category: 'bombons',
-    description: 'Bombom artesanal de morango.',
-    price: 18.0,
+    description: 'Creme de ninho, morango e ganache de chocolate.',
+    price: 20.0,
     image: 'assets/images/products/bombom/bombom-de-morango.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 2,
     name: 'Bombom de Uva',
     category: 'bombons',
-    description: 'Bombom artesanal de uva.',
+    description: 'Creme de ninho, uva, ganache de chocolate.',
     price: 18.0,
     image: 'assets/images/products/bombom/bombom-de-uva.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 3,
     name: 'Bombom de Kinder Bueno',
     category: 'bombons',
-    description: 'Bombom artesanal de Kinder Bueno.',
-    price: 28.0,
+    description: 'Creme de ninho, Nutella, Kinder Bueno.',
+    price: 29.0,
     image: 'assets/images/products/bombom/bombom-kinder-bueno.jpeg',
     featured: true,
   },
-
+ 
   // =========================
   // COOKIES
   // =========================
-
+ 
   {
     id: 4,
     name: 'Mini Cookie com Calda',
     category: 'cookies',
-    description: 'Mini cookie servido com calda. Porção de 180g.',
+    description: '180g de mini cookie com uma calda.',
     price: 18.0,
     image: 'assets/images/products/cookie/mini-cookies.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 5,
     name: 'Cookie na Panelinha',
@@ -95,31 +94,31 @@ export const PRODUCTS = [
     image: 'assets/images/products/cookie/cookie-panelinha.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 6,
     name: 'Cookie no Bowl',
     category: 'cookies',
     description: 'Cookie artesanal servido no bowl. Porção de 750ml.',
-    price: 42.0,
+    price: 62.0,
     image: 'assets/images/products/cookie/cookie-bowl.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 26,
     name: 'Ice Cookie',
     category: 'cookies',
-    description: 'Gelato de ninho, acompanhado com um cookie.',
+    description: 'Cookie da massa tradicional com gotas de chocolate e um delicioso gelato de ninho.',
     price: 18.0,
     image: 'assets/images/products/cookie/ice-cookie.jpeg',
     featured: true,
   },
-
+ 
   // =========================
   // BROWNIES
   // =========================
-
+ 
   {
     id: 7,
     name: 'Brownie Marmitinha — Ninho com Nutella',
@@ -129,17 +128,17 @@ export const PRODUCTS = [
     image: 'assets/images/products/brownie/brownie-de-ninho.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 8,
     name: 'Brownie Marmitinha — Maracujá',
     category: 'brownies',
-    description: 'Brownie na marmitinha com maracujá e chocolate.',
-    price: 24.0,
+    description: 'Ganache de maracujá, brownie de chocolate, brigadeiro de chocolate ao leite.',
+    price: 25.0,
     image: 'assets/images/products/brownie/brownie-maracuja.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 9,
     name: 'Box de Brownie',
@@ -149,21 +148,21 @@ export const PRODUCTS = [
     image: 'assets/images/products/brownie/box-brownie.jpeg',
     featured: true,
   },
-
+ 
    {
     id: 23,
-    name: 'Brownie bites',
+    name: 'Brownie Bites',
     category: 'brownies',
-    description: 'Bolinhas de brownie banhadas no chocolate ao leite.',
+    description: 'Bolinhas de brownie banhadas por chocolate ao leite.',
     price: 17.0,
     image: 'assets/images/products/brownie/brownie-bites.jpeg',
     featured: true,
   },
-
+ 
   // =========================
   // MINI BOLOS
   // =========================
-
+ 
   {
     id: 10,
     name: 'Mini Bolo de Cenoura',
@@ -173,7 +172,7 @@ export const PRODUCTS = [
     image: 'assets/images/products/bolo/mini-bolo-cenoura.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 11,
     name: 'Mini Bolo Matilda',
@@ -183,7 +182,7 @@ export const PRODUCTS = [
     image: 'assets/images/products/bolo/bolo-matilda.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 12,
     name: 'Mini Bolo de Prestígio',
@@ -193,7 +192,7 @@ export const PRODUCTS = [
     image: 'assets/images/products/bolo/mini-bolo-prestigio.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 13,
     name: 'Mini Bolo de Maracujá',
@@ -203,105 +202,106 @@ export const PRODUCTS = [
     image: 'assets/images/products/bolo/mini-bolo-maracuja.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 13,
     name: 'Bolo Gelado',
     category: 'mini-bolos',
-    description: 'bolo gelado nos sabores de (chocolate, prestigio e ninho).',
+    description: 'Bolo gelado nos sabores de (chocolate, prestígio e ninho).',
     price: 14.0,
     image: 'assets/images/products/bolo/mini-bolo-maracuja.jpg',
     featured: false,
   },
-
+ 
   {
     id: 24,
     name: 'Box Aniversário',
     category: 'mini-bolos',
-    description: 'box de aniversário',
+    description: 'Um mini bolo, 6 docinhos.',
     price: 50.0,
     image: 'assets/images/products/bolo/box-aniversario.jpeg',
     featured: false,
   },
-
+ 
   // =========================
-  // ENTREMENTS
+  // ENTREMETS
   // =========================
-
+ 
   {
     id: 14,
     name: 'Entremet de Nozes',
     category: 'entremets',
-    description: 'Entremet artesanal de nozes.',
+    description: 'Mousse de chocolate branco, doce de leite, nozes picadas, casquinha de chocolate branco.',
     price: 30.0,
     image: 'assets/images/products/entremets/entremet-de-nozes.jpeg',
     featured: true,
   },
-
+ 
   {
     id: 15,
     name: 'Entremet de Cacau',
     category: 'entremets',
-    description: 'Entremet artesanal de cacau.',
+    description: 'Mousse de chocolate ao leite, com ganache de chocolate e chocolate picadinho.',
     price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-cacau.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 16,
     name: 'Entremet de Café',
     category: 'entremets',
-    description: 'Entremet artesanal de café.',
+    description: 'Mousse de café com brownie molhado no café.',
     price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-cafe.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 17,
     name: 'Entremet de Amendoim',
     category: 'entremets',
-    description: 'Entremet artesanal de amendoim.',
+    description: 'Mousse de chocolate branco com caramelo salgado e amendoim.',
     price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-amendoim.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 18,
     name: 'Entremet de Framboesa',
     category: 'entremets',
     description: 'Entremet artesanal de framboesa.',
-    price: 22.0,
+    price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-framboesa.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 19,
     name: 'Entremet de Maracujá',
     category: 'entremets',
-    description: 'Entremet artesanal de maracujá.',
-    price: 22.0,
+    description: 'Mousse de chocolate branco com compota de maracujá com casquinha de chocolate.',
+    price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-maracuja.jpeg',
     featured: false,
   },
-
+ 
   {
     id: 20,
     name: 'Entremet de Manga',
     category: 'entremets',
-    description: 'Entremet artesanal de manga.',
-    price: 22.0,
+    description: 'Mousse de chocolate branco com compota de manga e chocolate branco.',
+    price: 25.0,
     image: 'assets/images/products/entremets/entremet-de-manga.jpeg',
     featured: false,
   },
-
+ 
+ 
   // =========================
   // SALGADOS
   // =========================
-
+ 
   {
     id: 21,
     name: 'Coxinha de Costela com Cream Cheese',
@@ -311,7 +311,7 @@ export const PRODUCTS = [
     image: 'assets/images/products/coxinha-costela.jpg',
     featured: true,
   },
-
+ 
   {
     id: 22,
     name: 'Empada de Frango na Marmitinha',

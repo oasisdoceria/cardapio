@@ -1,5 +1,3 @@
-
-
 export const WHATSAPP_CONFIG = {
   number: '5534999938956',
 
@@ -23,7 +21,7 @@ export function buildEmptyCartMessage() {
   return WHATSAPP_CONFIG.messages.emptyCart;
 }
 
-export function buildOrderMessage(items, total) {
+export function buildOrderMessage(items, total, deliveryFee = 0) {
   const lines = items.map((item) => {
     const subtotal = formatCurrency(item.price * item.quantity);
     return `${item.quantity}x ${item.name} — ${subtotal}`;
@@ -34,15 +32,16 @@ export function buildOrderMessage(items, total) {
     '',
     ...lines,
     '',
+    ...(deliveryFee > 0 ? [`Taxa fixa de entrega: ${formatCurrency(deliveryFee)}`] : []),
     `Total: ${formatCurrency(total)}`,
     '',
     WHATSAPP_CONFIG.messages.orderFooter,
   ].join('\n');
 }
 
-export function openWhatsAppWithCart(items, total) {
+export function openWhatsAppWithCart(items, total, deliveryFee = 0) {
   const message = items.length
-    ? buildOrderMessage(items, total)
+    ? buildOrderMessage(items, total, deliveryFee)
     : buildEmptyCartMessage();
   window.open(buildWhatsAppUrl(message), '_blank', 'noopener');
 }
@@ -50,3 +49,4 @@ export function openWhatsAppWithCart(items, total) {
 export function openWhatsAppPlain() {
   window.open(buildWhatsAppUrl(buildEmptyCartMessage()), '_blank', 'noopener');
 }
+ 

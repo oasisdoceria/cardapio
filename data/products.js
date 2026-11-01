@@ -119,25 +119,25 @@ export const PRODUCTS = [
   // BROWNIES
   // =========================
  
-  {
-    id: 7,
-    name: 'Brownie Marmitinha — Ninho com Nutella',
-    category: 'brownies',
-    description: 'Brownie na marmitinha com Ninho e Nutella.',
-    price: 24.0,
-    image: 'assets/images/products/brownie/brownie-de-ninho.jpeg',
-    featured: true,
-  },
+  // {
+  //   id: 7,
+  //   name: 'Brownie Marmitinha — Ninho com Nutella',
+  //   category: 'brownies',
+  //   description: 'Brownie na marmitinha com Ninho e Nutella.',
+  //   price: 24.0,
+  //   image: 'assets/images/products/brownie/brownie-de-ninho.jpeg',
+  //   featured: true,
+  // },
  
-  {
-    id: 8,
-    name: 'Brownie Marmitinha — Maracujá',
-    category: 'brownies',
-    description: 'Ganache de maracujá, brownie de chocolate, brigadeiro de chocolate ao leite.',
-    price: 25.0,
-    image: 'assets/images/products/brownie/brownie-maracuja.jpeg',
-    featured: false,
-  },
+  // {
+  //   id: 8,
+  //   name: 'Brownie Marmitinha — Maracujá',
+  //   category: 'brownies',
+  //   description: 'Ganache de maracujá, brownie de chocolate, brigadeiro de chocolate ao leite.',
+  //   price: 25.0,
+  //   image: 'assets/images/products/brownie/brownie-maracuja.jpeg',
+  //   featured: false,
+  // },
  
    {
     id: 23,

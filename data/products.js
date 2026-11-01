@@ -86,16 +86,6 @@ export const PRODUCTS = [
   },
  
   {
-    id: 5,
-    name: 'Cookie na Panelinha',
-    category: 'cookies',
-    description: 'Cookie artesanal servido na panelinha.',
-    price: 28.0,
-    image: 'assets/images/products/cookie/cookie-panelinha.jpeg',
-    featured: false,
-  },
- 
-  {
     id: 6,
     name: 'Cookie no Bowl',
     category: 'cookies',
@@ -113,6 +103,16 @@ export const PRODUCTS = [
     price: 18.0,
     image: 'assets/images/products/cookie/ice-cookie.jpeg',
     featured: true,
+  },
+ 
+  {
+    id: 27,
+    name: 'Cookie na Marmitinha',
+    category: 'cookies',
+    description: 'Cookie de colher recheado com Nutella.',
+    price: 25.0,
+    image: 'assets/images/products/cookie/cookie-marmitinha.jpeg',
+    featured: false,
   },
  
   // =========================
@@ -139,16 +139,6 @@ export const PRODUCTS = [
     featured: false,
   },
  
-  {
-    id: 9,
-    name: 'Box de Brownie',
-    category: 'brownies',
-    description: 'Box de brownie com 4 sabores.',
-    price: 30.0,
-    image: 'assets/images/products/brownie/box-brownie.jpeg',
-    featured: true,
-  },
- 
    {
     id: 23,
     name: 'Brownie Bites',
@@ -159,67 +149,33 @@ export const PRODUCTS = [
     featured: true,
   },
  
-  // =========================
-  // MINI BOLOS
-  // =========================
- 
   {
-    id: 10,
-    name: 'Mini Bolo de Cenoura',
-    category: 'mini-bolos',
-    description: 'Mini bolo de cenoura artesanal.',
-    price: 30.0,
-    image: 'assets/images/products/bolo/mini-bolo-cenoura.jpeg',
+    id: 28,
+    name: 'Brownie de Maracujá 350g',
+    category: 'brownies',
+    description: 'Ganache de maracujá, brownie e brigadeiro de chocolate.',
+    price: 25.0,
+    image: 'assets/images/products/brownie/brownie-maracuja_2.jpeg',
     featured: false,
   },
  
   {
-    id: 11,
-    name: 'Mini Bolo Matilda',
-    category: 'mini-bolos',
-    description: 'Mini bolo Matilda com chocolate.',
-    price: 30.0,
-    image: 'assets/images/products/bolo/bolo-matilda.jpeg',
-    featured: true,
-  },
- 
-  {
-    id: 12,
-    name: 'Mini Bolo de Prestígio',
-    category: 'mini-bolos',
-    description: 'Mini bolo de prestígio.',
-    price: 30.0,
-    image: 'assets/images/products/bolo/mini-bolo-prestigio.jpeg',
+    id: 29,
+    name: 'Triple Chocobrownie 350g',
+    category: 'brownies',
+    description: 'Brigadeiro de chocolate ao leite, brownie de chocolate, ganache de chocolate e casquinha de chocolate.',
+    price: 25.0,
+    image: 'assets/images/products/brownie/triplochocobrownie.jpeg',
     featured: false,
   },
  
   {
-    id: 13,
-    name: 'Mini Bolo de Maracujá',
-    category: 'mini-bolos',
-    description: 'Mini bolo de maracujá.',
-    price: 30.0,
-    image: 'assets/images/products/bolo/mini-bolo-maracuja.jpeg',
-    featured: false,
-  },
- 
-  {
-    id: 13,
-    name: 'Bolo Gelado',
-    category: 'mini-bolos',
-    description: 'Bolo gelado nos sabores de (chocolate, prestígio e ninho).',
-    price: 14.0,
-    image: 'assets/images/products/bolo/mini-bolo-maracuja.jpg',
-    featured: false,
-  },
- 
-  {
-    id: 24,
-    name: 'Box Aniversário',
-    category: 'mini-bolos',
-    description: 'Um mini bolo, 6 docinhos.',
-    price: 50.0,
-    image: 'assets/images/products/bolo/box-aniversario.jpeg',
+    id: 30,
+    name: 'Brownie Duo 350g',
+    category: 'brownies',
+    description: 'Creme de ninho, brownie de chocolate, brigadeiro de chocolate ao leite.',
+    price: 25.0,
+    image: 'assets/images/products/brownie/brownie-duo.jpeg',
     featured: false,
   },
  
@@ -241,9 +197,9 @@ export const PRODUCTS = [
     id: 15,
     name: 'Entremet de Cacau',
     category: 'entremets',
-    description: 'Mousse de chocolate ao leite, com ganache de chocolate e chocolate picadinho.',
+    description: 'Mousse de chocolate ao leite, recheado com ganache de chocolate e chocolate picado.',
     price: 25.0,
-    image: 'assets/images/products/entremets/entremet-de-cacau.jpeg',
+    image: 'assets/images/products/entremets/entremet-cacau.jpeg',
     featured: false,
   },
  
@@ -308,7 +264,7 @@ export const PRODUCTS = [
     category: 'salgados',
     description: 'Coxinha de costela com cream cheese.',
     price: 16.0,
-    image: 'assets/images/products/coxinha-costela.jpg',
+    image: 'assets/images/products/salgados/coxinha-costela.jpeg',
     featured: true,
   },
  
@@ -318,7 +274,7 @@ export const PRODUCTS = [
     category: 'salgados',
     description: 'Empada de frango servida na marmitinha.',
     price: 14.0,
-    image: 'assets/products/salgados',
+    image: 'assets/images/products/salgados/empada-frango.jpeg',
     featured: false,
   },
 ];

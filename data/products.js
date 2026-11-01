@@ -318,7 +318,7 @@ export const PRODUCTS = [
     category: 'salgados',
     description: 'Empada de frango servida na marmitinha.',
     price: 14.0,
-    image: 'assets/images/products/empada-frango.jpg',
+    image: 'assets/products/salgados',
     featured: false,
   },
 ];

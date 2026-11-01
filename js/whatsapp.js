@@ -4,6 +4,7 @@ export const WHATSAPP_CONFIG = {
   messages: {
     orderIntro: 'Olá! Gostaria de fazer um pedido:',
     emptyCart: 'Olá! Gostaria de conhecer os produtos da Oásis.',
+    orderDelivery: 'Pedido para entrega.',
     orderFooter: 'Aguardo a confirmação do pedido. Obrigado!',
   },
 };
@@ -32,7 +33,12 @@ export function buildOrderMessage(items, total, deliveryFee = 0) {
     '',
     ...lines,
     '',
-    ...(deliveryFee > 0 ? [`Taxa fixa de entrega: ${formatCurrency(deliveryFee)}`] : []),
+    ...(deliveryFee > 0
+      ? [
+          WHATSAPP_CONFIG.messages.orderDelivery,
+          `Taxa fixa de entrega: ${formatCurrency(deliveryFee)}`,
+        ]
+      : []),
     `Total: ${formatCurrency(total)}`,
     '',
     WHATSAPP_CONFIG.messages.orderFooter,

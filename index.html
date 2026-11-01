@@ -190,12 +190,17 @@
       <p class="cart-empty" id="cartEmpty">Seu pedido está vazio.</p>
 
       <div class="cart-footer" id="cartFooter" hidden>
+        <label class="cart-delivery" for="cartDelivery">
+          <input type="checkbox" id="cartDelivery" />
+          <span>Quero entrega (taxa fixa de R$ 8,00)</span>
+        </label>
+
         <div class="cart-summary">
           <span>Total</span>
           <strong id="cartTotal">R$ 0,00</strong>
         </div>
 
-        <div class="cart-summary cart-summary--fee">
+        <div class="cart-summary cart-summary--fee" id="cartDeliveryRow">
           <span>Taxa fixa de entrega:</span>
           <span id="cartDeliveryFee">R$ 8,00</span>
         </div>

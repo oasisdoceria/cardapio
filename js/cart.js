@@ -12,6 +12,7 @@ export class Cart {
   constructor(products) {
     this.products = new Map(products.map((p) => [p.id, p]));
     this.quantities = new Map();
+    this.delivery = false;
     this.listeners = new Set();
     this._load();
   }
@@ -78,6 +79,12 @@ export class Cart {
 
   clear() {
     this.quantities.clear();
+    this.delivery = false;
+    this._emit();
+  }
+
+  setDelivery(value) {
+    this.delivery = Boolean(value);
     this._emit();
   }
 
@@ -101,7 +108,7 @@ export class Cart {
   }
 
   getDeliveryFee() {
-    return this.getItemCount() > 0 ? DELIVERY_FEE : 0;
+    return this.delivery && this.getItemCount() > 0 ? DELIVERY_FEE : 0;
   }
 
   getGrandTotal() {
@@ -113,6 +120,7 @@ export class Cart {
       items: this.getItems(),
       itemCount: this.getItemCount(),
       total: this.getTotal(),
+      delivery: this.delivery,
       deliveryFee: this.getDeliveryFee(),
       grandTotal: this.getGrandTotal(),
     };

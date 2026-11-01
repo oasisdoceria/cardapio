@@ -23,6 +23,8 @@ const els = {
   cartEmpty: document.getElementById('cartEmpty'),
   cartFooter: document.getElementById('cartFooter'),
   cartTotal: document.getElementById('cartTotal'),
+  cartDelivery: document.getElementById('cartDelivery'),
+  cartDeliveryRow: document.getElementById('cartDeliveryRow'),
   cartDeliveryFee: document.getElementById('cartDeliveryFee'),
   cartCheckout: document.getElementById('cartCheckout'),
   cartClear: document.getElementById('cartClear'),
@@ -80,7 +82,7 @@ function closeCart() {
 }
 
 function updateCartUI(state) {
-  const { items, itemCount, deliveryFee, grandTotal } = state;
+  const { items, itemCount, delivery, deliveryFee, grandTotal } = state;
 
   els.cartCount.textContent = itemCount;
   els.cartCount.hidden = itemCount === 0;
@@ -88,6 +90,8 @@ function updateCartUI(state) {
   renderCartItems(els.cartItems, items);
   els.cartEmpty.hidden = items.length > 0;
   els.cartFooter.hidden = items.length === 0;
+  if (els.cartDelivery) els.cartDelivery.checked = delivery;
+  if (els.cartDeliveryRow) els.cartDeliveryRow.style.display = delivery ? '' : 'none';
   if (els.cartDeliveryFee) els.cartDeliveryFee.textContent = formatPrice(deliveryFee);
   els.cartTotal.textContent = formatPrice(grandTotal);
 
@@ -141,6 +145,10 @@ function init() {
   els.cartClose.addEventListener('click', closeCart);
   els.cartOverlay.addEventListener('click', closeCart);
   els.floatingCartBtn.addEventListener('click', openCart);
+
+  els.cartDelivery.addEventListener('change', () => {
+    cart.setDelivery(els.cartDelivery.checked);
+  });
 
   els.cartClear.addEventListener('click', () => {
     cart.clear();

@@ -31,7 +31,7 @@ export const CATEGORIES = [
   { id: 'bombons', label: 'Bombons' },
   { id: 'cookies', label: 'Cookies' },
   { id: 'brownies', label: 'Brownies' },
-  { id: 'mini-bolos', label: 'Bolos' },
+  { id: 'gelados', label: 'Gelados' },
   { id: 'entremets', label: 'Entremets' },
   { id: 'salgados', label: 'Salgados' },
 ];
@@ -70,6 +70,8 @@ export const PRODUCTS = [
     image: 'assets/images/products/bombom/bombom-kinder-bueno.jpeg',
     featured: true,
   },
+
+  
  
   // =========================
   // COOKIES
@@ -177,6 +179,30 @@ export const PRODUCTS = [
     price: 25.0,
     image: 'assets/images/products/brownie/brownie-duo.jpeg',
     featured: false,
+  },
+ 
+  // =========================
+  // GELADOS
+  // =========================
+
+    {
+    id: 31,
+    name: 'Bites de sorvete',
+    category: 'gelados',
+    description: 'Gelato de sorvete banhado na casquinha de chocolate, perfeito para os dias quentes!',
+    price: 18.0,
+    image: 'assets/images/products/bombom/bites-sorvete.jpg',
+    featured: true,
+  },
+
+    {
+    id: 26,
+    name: 'Ice Cookie',
+    category: 'gelados',
+    description: 'Cookie da massa tradicional com gotas de chocolate e um delicioso gelato de ninho.',
+    price: 18.0,
+    image: 'assets/images/products/cookie/ice-cookie.jpeg',
+    featured: true,
   },
  
   // =========================

@@ -1,5 +1,5 @@
 export const WHATSAPP_CONFIG = {
-  number: '5534999938956',
+  number: '5534997195177',
 
   messages: {
     orderIntro: 'Olá! Gostaria de fazer um pedido:',
